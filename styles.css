@@ -1,0 +1,454 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #d4a5ff, #6b7280);
+    color: #1a202c;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexbox Navigation */
+nav {
+    background: #7c3aed;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4a5ff;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero h1 {
+    color: #7c3aed;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #4a5568;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: linear-gradient(135deg, #7c3aed, #9f7aea);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background: linear-gradient(135deg, #9f7aea, #7c3aed);
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.about h2 {
+    color: #7c3aed;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #4a5568;
+}
+
+/* Main Content with CSS Grid */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Contact Form Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+}
+
+.contact-form h2 {
+    color: #7c3aed;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #1a202c;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #9f7aea;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    background: #7c3aed;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #9f7aea;
+    transform: scale(1.1);
+}
+
+.error {
+    color: #e53e3e;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Idea Suggestions Styling */
+.idea-suggestions {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+    grid-column: 1 / -1;
+}
+
+.idea-suggestions h2 {
+    color: #7c3aed;
+    margin-bottom: 15px;
+}
+
+.idea-suggestions p {
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.idea-suggestions input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #9f7aea;
+    border-radius: 5px;
+}
+
+.idea-suggestions button {
+    background: linear-gradient(135deg, #7c3aed, #9f7aea);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.idea-suggestions button:hover {
+    background: linear-gradient(135deg, #9f7aea, #7c3aed);
+    transform: scale(1.05);
+}
+
+.idea-suggestions ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.idea-suggestions li {
+    background: #f9f0ff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.idea-suggestions li button {
+    background: #e53e3e;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.idea-suggestions li button:hover {
+    background: #c53030;
+}
+
+/* Image Gallery Styling */
+.gallery {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+    grid-column: 1 / -1;
+}
+
+.gallery h2 {
+    color: #7c3aed;
+    margin-bottom: 15px;
+}
+
+.gallery p {
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+/* Custom File Upload Button */
+.file-upload-container {
+    margin-bottom: 10px;
+}
+
+.file-upload-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #7c3aed, #9f7aea);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.file-upload-button:hover {
+    background: linear-gradient(135deg, #9f7aea, #7c3aed);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.file-upload-button:active {
+    transform: scale(0.95);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #e53e3e;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-item button:hover {
+    background: #c53030;
+}
+
+/* Fullscreen Image Modal */
+.fullscreen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fullscreen-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #7c3aed;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.fullscreen-close:hover {
+    background: #9f7aea;
+    transform: scale(1.1);
+}
+
+/* Footer with Social Icons */
+footer {
+    background: #7c3aed;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+}
+
+footer a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+footer a img:hover {
+    transform: scale(1.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .idea-suggestions,
+    .gallery {
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .idea-suggestions input {
+        width: 60%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .file-upload-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .gallery-item img {
+        max-height: 150px;
+    }
+
+    .fullscreen-close {
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+}

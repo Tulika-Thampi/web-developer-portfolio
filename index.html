@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Web Developer Portfolio</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#contact" onclick="showModal()">Contact</a>
+        <a href="#ideas">Ideas</a>
+        <a href="#gallery">Inspirations</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Discover my web development journey and share your ideas to inspire my next creations!</p><br>
+        <button onclick="showModal()">Get in Touch</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate learner diving into the enchanted world of web development. With HTML, CSS, and JavaScript,
+            I craft interactive, vibrant websites. I am also familiar with PHP and MySQL as well as other programming
+            languages like C, C++, Python and Java and frameworks of JavaScript like AngularJS, Node and React. I have
+            also made some websites and apps (Using Android Studio) that you can check out on my LinkedIn page. Below,
+            you can suggest ideas for my next projects, share inspiring
+            images, or reach out to collaborate. Join me on this coding journey!</p>
+    </section>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal">
+        <section id="contact" class="contact-form">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <div id="nameError" class="error">Please enter your name.</div>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div id="emailError" class="error">Please enter a valid email address.</div>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <div id="messageError" class="error">Please enter a message.</div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="fullscreenModal" class="fullscreen-modal">
+        <button id="closeFullscreen" class="fullscreen-close">X</button>
+        <img id="fullscreenImage" src="" alt="Fullscreen Image">
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Idea Suggestions -->
+        <section id="ideas" class="idea-suggestions">
+            <h2>Suggest New Ideas</h2>
+            <p>Have an idea for a cool website feature? Add it below to inspire my next project! Your suggestions help
+                shape my portfolio and fuel my coding adventures.</p>
+            <input type="text" id="ideaInput" placeholder="Suggest a feature (e.g., Add a dark mode toggle)...">
+            <button onclick="addIdea()">Add Idea</button>
+            <ul id="ideaList"></ul>
+        </section>
+
+        <!-- Image Gallery -->
+        <section id="gallery" class="gallery">
+            <h2>Inspiration Gallery</h2>
+            <p>Share images that inspire web design or coding ideas! Upload screenshots or visuals to spark creativity
+                and help shape my future projects.</p>
+            <div class="file-upload-container">
+                <input type="file" id="imageInput" accept="image/*" multiple>
+                <button class="file-upload-button" onclick="document.getElementById('imageInput').click()">Upload Your Inspiration!</button>
+            </div>
+            <div id="galleryGrid" class="gallery-grid"></div>
+        </section>
+    </div>
+
+    <!-- Footer with Social Icons -->
+    <footer>
+        <a href="https://www.linkedin.com/in/tulika-thampi" target="_blank" rel="noopener">
+            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Tulika-Thampi" target="_blank" rel="noopener">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
